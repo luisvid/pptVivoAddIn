@@ -38,6 +38,7 @@
             this.pptVivoTab = this.Factory.CreateRibbonTab();
             this.grpConnection = this.Factory.CreateRibbonGroup();
             this.grpPresentation = this.Factory.CreateRibbonGroup();
+            this.grpHelp = this.Factory.CreateRibbonGroup();
             this.btnLogin = this.Factory.CreateRibbonButton();
             this.btnAccount = this.Factory.CreateRibbonButton();
             this.btnStart = this.Factory.CreateRibbonButton();
@@ -45,10 +46,12 @@
             this.btnGetLink = this.Factory.CreateRibbonButton();
             this.btnQRCode = this.Factory.CreateRibbonButton();
             this.btnQuestion = this.Factory.CreateRibbonButton();
+            this.btnHelp = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.pptVivoTab.SuspendLayout();
             this.grpConnection.SuspendLayout();
             this.grpPresentation.SuspendLayout();
+            this.grpHelp.SuspendLayout();
             // 
             // tab1
             // 
@@ -60,6 +63,7 @@
             // 
             this.pptVivoTab.Groups.Add(this.grpConnection);
             this.pptVivoTab.Groups.Add(this.grpPresentation);
+            this.pptVivoTab.Groups.Add(this.grpHelp);
             this.pptVivoTab.Label = "pptVivo!";
             this.pptVivoTab.Name = "pptVivoTab";
             // 
@@ -80,6 +84,12 @@
             this.grpPresentation.Label = "Presentation";
             this.grpPresentation.Name = "grpPresentation";
             // 
+            // grpHelp
+            // 
+            this.grpHelp.Items.Add(this.btnHelp);
+            this.grpHelp.Label = "Help";
+            this.grpHelp.Name = "grpHelp";
+            // 
             // btnLogin
             // 
             this.btnLogin.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
@@ -88,6 +98,8 @@
             this.btnLogin.Label = "Login to pptVivo!";
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.ShowImage = true;
+            this.btnLogin.SuperTip = "Shows you a form to enter your User name and Password so you can login to your pp" +
+                "tVivo! account";
             this.btnLogin.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnLogin_Click);
             // 
             // btnAccount
@@ -98,6 +110,8 @@
             this.btnAccount.Label = "Go to website";
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.ShowImage = true;
+            this.btnAccount.SuperTip = "Open your favorite browser and goes pptvivo.com so you can configure your account" +
+                " options.";
             this.btnAccount.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnAccount_Click);
             // 
             // btnStart
@@ -108,6 +122,8 @@
             this.btnStart.Label = "Create Exposition";
             this.btnStart.Name = "btnStart";
             this.btnStart.ShowImage = true;
+            this.btnStart.SuperTip = "Setup the pptVivo! Viewer so you can share the current presentation with your aud" +
+                "ience.";
             // 
             // btnUpload
             // 
@@ -117,6 +133,7 @@
             this.btnUpload.Label = "Upload presentation";
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.ShowImage = true;
+            this.btnUpload.SuperTip = "Uploads the current presentation to your account at pptvivo.com.";
             // 
             // btnGetLink
             // 
@@ -126,6 +143,7 @@
             this.btnGetLink.Label = "Get short URL";
             this.btnGetLink.Name = "btnGetLink";
             this.btnGetLink.ShowImage = true;
+            this.btnGetLink.SuperTip = "Gives you a short URL pointing to your presentation Viewer";
             // 
             // btnQRCode
             // 
@@ -135,6 +153,7 @@
             this.btnQRCode.Label = "Get QR code";
             this.btnQRCode.Name = "btnQRCode";
             this.btnQRCode.ShowImage = true;
+            this.btnQRCode.SuperTip = "Gives you an image of a QR code that redirect to your presentation Viewer.";
             // 
             // btnQuestion
             // 
@@ -144,6 +163,17 @@
             this.btnQuestion.Label = "Audience questions";
             this.btnQuestion.Name = "btnQuestion";
             this.btnQuestion.ShowImage = true;
+            this.btnQuestion.SuperTip = "Shows you the list of questions asked by the audience during the presentation.";
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.btnHelp.Description = "Show help fpr the pptVivo! Ribbon";
+            this.btnHelp.Image = global::pptVivo2007Addin.Properties.Resources.help32;
+            this.btnHelp.Label = "Help";
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.ShowImage = true;
+            this.btnHelp.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnHelp_Click);
             // 
             // pptVivoRibbon
             // 
@@ -160,6 +190,8 @@
             this.grpConnection.PerformLayout();
             this.grpPresentation.ResumeLayout(false);
             this.grpPresentation.PerformLayout();
+            this.grpHelp.ResumeLayout(false);
+            this.grpHelp.PerformLayout();
 
         }
 
@@ -176,6 +208,8 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnGetLink;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnQRCode;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnQuestion;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup grpHelp;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnHelp;
     }
 
     partial class ThisRibbonCollection

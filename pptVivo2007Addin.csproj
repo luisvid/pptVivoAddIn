@@ -296,6 +296,10 @@
   <ItemGroup>
     <None Include="Resources\questions32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\help32.png" />
+    <None Include="Resources\help321.png" />
+  </ItemGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Include additional build rules for an Office application add-in. -->

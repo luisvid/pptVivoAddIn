@@ -24,7 +24,6 @@ namespace pptVivo2007Addin
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
 
-
             //http://msdn.microsoft.com/en-us/library/vstudio/cc668192(v=vs.100).aspx
             //Slide change event handler            
             /*
@@ -38,7 +37,6 @@ namespace pptVivo2007Addin
             this.Application.SlideSelectionChanged +=
                 new PowerPoint.EApplication_SlideSelectionChangedEventHandler(ThisAddIn_SlideSelectionChanged);
 
-
             //Slide change in slide show event handler
             this.Application.SlideShowNextSlide +=
                 new PowerPoint.EApplication_SlideShowNextSlideEventHandler(ThisAddIn_SlideShowNextSlide);
@@ -46,7 +44,6 @@ namespace pptVivo2007Addin
             //After presentation open event handler
             this.Application.AfterPresentationOpen +=
                 new PowerPoint.EApplication_AfterPresentationOpenEventHandler(ThisAddIn_AfterPresentationOpen);
-
 
         }
 
