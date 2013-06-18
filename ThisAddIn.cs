@@ -17,7 +17,7 @@ namespace pptVivo2007Addin
     public partial class ThisAddIn
     {
         
-        private string expositionId;
+        private string expositionId = "0";
 
         public static int userId = 0;
 
@@ -49,6 +49,19 @@ namespace pptVivo2007Addin
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
         {
+        }
+
+        public void LoadExpositionIdAfterLogin()
+        {
+            loadExpositionId(this.Application.ActivePresentation.Name);
+
+            //Resets the DB exposition index
+            if (!this.expositionId.Equals(0))
+            {
+                String slideId = "1";
+                this.updateSlide(slideId);
+            }
+
         }
 
         //Loads exposition id for current presentation
