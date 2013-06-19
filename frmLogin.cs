@@ -81,10 +81,8 @@ namespace pptVivo2007Addin
             {
                 pptVivo2007Addin.ThisAddIn.userId = this.userId;
                 MessageBox.Show("Login successful. Welcome " + userLogin, "pptVivo! Login");
-
                 //After successfully login Load Exposition ID for the current presentation
                 Globals.ThisAddIn.LoadExpositionIdAfterLogin();
-
                 this.Close();
                 _childInstance = null;
             }
@@ -105,6 +103,11 @@ namespace pptVivo2007Addin
             String webResponse = objReader.ReadToEnd();
 
             return webResponse;
+        }
+
+        private void cmdCancel_Click(object sender, EventArgs e)
+        {
+
         }
 
     }
