@@ -156,7 +156,7 @@
     <ManifestKeyFile>pptVivo2007Addin_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>DC4BBF7BADE0A9CB0514E7719CBBC6B556002B0D</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>DE4EE3FE69017B25816A580CA5C9F6D788EF2A3E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!--
     This section specifies references for the project.
@@ -252,6 +252,7 @@
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
+    <None Include="Resources\help32.png" />
     <None Include="ThisAddIn.Designer.xml">
       <DependentUpon>ThisAddIn.cs</DependentUpon>
     </None>
@@ -295,10 +296,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\questions32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\help32.png" />
-    <None Include="Resources\help321.png" />
   </ItemGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

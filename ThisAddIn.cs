@@ -80,7 +80,8 @@ namespace pptVivo2007Addin
         //Slide moving in edition view
         void ThisAddIn_SlideSelectionChanged(PowerPoint.SlideRange SldRange)
         {
-            if (!this.expositionId.Equals(0))
+
+            if (this.expositionId != null && !this.expositionId.Equals(0))
             {
                 String slideId = SldRange.SlideNumber.ToString();
                 this.updateSlide(slideId);

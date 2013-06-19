@@ -68,6 +68,11 @@ namespace pptVivo2007Addin
 
         private void btnHelp_Click(object sender, RibbonControlEventArgs e)
         {
+       
+        }
+
+        private void btnHelp_Click_1(object sender, RibbonControlEventArgs e)
+        {
             OpenLink("http://pptvivo.com/en?action=downloadInfo");
         }
     }

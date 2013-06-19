@@ -34,11 +34,13 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.cmdCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmdLogin
             // 
-            this.cmdLogin.Location = new System.Drawing.Point(73, 91);
+            this.cmdLogin.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cmdLogin.Location = new System.Drawing.Point(29, 93);
             this.cmdLogin.Name = "cmdLogin";
             this.cmdLogin.Size = new System.Drawing.Size(75, 23);
             this.cmdLogin.TabIndex = 0;
@@ -79,12 +81,26 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Password";
             // 
+            // cmdCancel
+            // 
+            this.cmdCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cmdCancel.Location = new System.Drawing.Point(118, 93);
+            this.cmdCancel.Name = "cmdCancel";
+            this.cmdCancel.Size = new System.Drawing.Size(74, 23);
+            this.cmdCancel.TabIndex = 9;
+            this.cmdCancel.Text = "Cancel";
+            this.cmdCancel.UseVisualStyleBackColor = true;
+            this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
+            // 
             // frmLogin
             // 
             this.AcceptButton = this.cmdLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cmdCancel;
             this.ClientSize = new System.Drawing.Size(221, 135);
+            this.ControlBox = false;
+            this.Controls.Add(this.cmdCancel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPassword);
@@ -98,6 +114,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "pptVivo! Login";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,5 +127,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button cmdCancel;
     }
 }

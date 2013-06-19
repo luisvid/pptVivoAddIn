@@ -103,5 +103,16 @@ namespace pptVivo2007Addin
             return webResponse;
         }
 
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            _childInstance = null;
+        }
+
     }
 }
