@@ -17,7 +17,7 @@ namespace pptVivo2007Addin
     public partial class ThisAddIn
     {
         
-        private string expositionId;
+        private string expositionId = "0";
 
         public static int userId = 0;
 
@@ -51,6 +51,19 @@ namespace pptVivo2007Addin
         {
         }
 
+        public void LoadExpositionIdAfterLogin()
+        {
+            loadExpositionId(this.Application.ActivePresentation.Name);
+
+            //Resets the DB exposition index
+            if (!this.expositionId.Equals(0))
+            {
+                String slideId = "1";
+                this.updateSlide(slideId);
+            }
+
+        }
+
         //Loads exposition id for current presentation
         void ThisAddIn_AfterPresentationOpen(Microsoft.Office.Interop.PowerPoint.Presentation Pres)
         {
@@ -80,8 +93,7 @@ namespace pptVivo2007Addin
         //Slide moving in edition view
         void ThisAddIn_SlideSelectionChanged(PowerPoint.SlideRange SldRange)
         {
-
-            if (this.expositionId != null && !this.expositionId.Equals(0))
+            if (!this.expositionId.Equals(0))
             {
                 String slideId = SldRange.SlideNumber.ToString();
                 this.updateSlide(slideId);
