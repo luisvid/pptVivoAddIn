@@ -85,6 +85,11 @@ namespace pptVivo2007Addin
         {
             if (!this.expositionId.Equals(0))
             {
+                //add a text box to each new slide
+                PowerPoint.Shape textBox = Wn.View.Slide.Shapes.AddTextbox(
+                    Office.MsoTextOrientation.msoTextOrientationHorizontal, 0, 0, 500, 50);
+                textBox.TextFrame.TextRange.InsertAfter("Join us at: XXX/XXX");
+
                 String slideId = Wn.View.Slide.SlideNumber.ToString();
                 this.updateSlide(slideId);
             }

@@ -156,7 +156,7 @@
     <ManifestKeyFile>pptVivo2007Addin_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>DE4EE3FE69017B25816A580CA5C9F6D788EF2A3E</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>775333227E727EBEED1D8856E988292E236FF228</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!--
     This section specifies references for the project.
